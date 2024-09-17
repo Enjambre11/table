@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookbook</title>
+    <style>
+        body {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color:rgb(173, 132, 238);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .search-bar input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .recipe-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .recipe-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .recipe-item {
+            width: 30%;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .recipe-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .recipe-item h3 {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .recipe-detail {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+        }
+    
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+  <h1>COOK-BOOK-CODE</h1>
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search recipes..." onkeyup="filterRecipes()">
+    </div>
+</header>
+
+<section class="recipe-container">
+    <div class="recipe-list">
+        <!-- Recipe 1 -->
+        <div class="recipe-item" onclick="toggleRecipe(1)">
+            <img src="c:\Users\Student\Desktop\COOKBOKK\sinigang3.jpg" alt="SINIGANG">
+            <h3>SINIGANG</h3>
+        </div>
+        <div class="recipe-detail" id="recipe1">
+            <h3>SINIGANG</h3>
+            <p><strong>Description:</strong> Sinigang is a sour soup native to the Philippines. This recipe uses pork as the main ingredient. Other proteins and seafood can also be used. Beef, shrimp, fish are commonly used to cook sinigang.</p>
+           
+            
+            <h3>Ingredients</h3>
+            <ul>
+                
+                <li>2 lbs. pork belly </li>
+                <li>1 lb. young tamarind </li>
+                <li>1 bunch water spinach </li>
+                <li>8 pieces string beans </li>
+                <li>2 pieces eggplants </li>
+                <li>1 piece daikon radish </li>
+                <li>8 pieces okras</li>
+                <li>2 pieces tomatoes </li>
+                <li>2 pieces long green pepper</li>
+                <li>1 piece onion </li>
+                <li>2 quarts water</li>
+                <li>Fish sauce and ground black pepper </li>
+            
+            <p><strong>Procedure:</strong></p>
+       
+        <ol>
+            <li>Pour water in a cooking pot then let boil.</li>
+            <li>Boil the young tamarind in 2 quarts of water for 40 minutes. Filter the tamarind broth using a kitchen sieve or a strainer. Squeeze the tamarind afterwards to extract its remaining juices. 1 lb. young tamarind, 2 quarts water</li>
+            <li>Pour the tamarind broth into a cooking pot. Let it boil and then add the onion, pork belly, and half the amount of the tomatoes. 2 lbs. pork belly, 1 piece onion, 2 pieces tomatoes</li>
+            <li>Skim-off the floating scums, pour 1 tablespoon fish sauce, cover and continue to simmer for 1 hour. Fish sauce and ground black pepper</li>
+            <li>Add daikon radish and eggplants. Cook for 5 minutes. 1 piece daikon radish, 2 pieces eggplants</li>
+            <li>Add the long green pepper, string beans, remaining tomatoes, and okra. Cook for 3 minutes. 8 pieces string beans, 2 pieces tomatoes, 2 pieces long green pepper, 8 pieces okras </li>
+            <li>Add the chopped water spinach stalks and season with fish sauce and ground black pepper. Cook for 2 minutes. Fish sauce and ground black pepper</li>
+            <li>Put the water spinach leaves. Cover and turn the heat off. Let the residual heat cook the leaves for 3 minutes before serving. </li>
+            
+</div>
+        <!-- Recipe 2 -->
+        <div class="recipe-item" onclick="toggleRecipe(2)">
+            <img src="c:\Users\Student\Desktop\COOKBOKK\balutin3.jpg" alt="LUMPIA">
+            <h3>LUMPIA</h3>
+        </div>
+        <div class="recipe-detail" id="recipe2">
+            <h3>LUMPIA</h3>
+            <p><strong>Description:</strong>This is a basic lumpia recipe, or Filipino egg roll (also known as Lumpiang Shanghai). The filling is composed of ground pork along with minced onions, carrots, seasonings, and egg. This recipe is a good baseline for making lumpia. Feel free to use it and experiment with additional ingredients to create your own unique version!</p>
+            <p><strong>Ingredients:</strong></p>
+
+            <ul>
+                
+                <li>50 pieces lumpia wrapper</li>
+                <li>3 cups cooking oil</li>
+            <h3>Filling Ingredients</h3>
+                <li>1 1/2 lbs ground pork</li>
+                <li>2 pieces onion </li>
+                <li>2 pieces carrots  </li>
+                <li>1 1/2 teaspoons garlic powder</li>
+                <li>1/2 teaspoon ground black pepper</li>
+                <li>1/2 cup parsley  </li>
+                <li>1 1/2 teaspoons salt</li>
+                <li>1 tablespoon sesame oil</li>
+                <li>2 eggs</li>
+            
+            <p><strong>Procedure:</strong> 
+        
+    </ul>
+        <ol>
+                
+            <li>Combine all filling ingredients in a bowl. Mix well.</li>
+            <li>Scoop around 1 to 1 1/2 tablespoons of filling and place over a piece of lumpia wrapper. Spread the filling and then fold both sides of the wrapper. Fold the bottom. Brush beaten egg mixture on the top end of the wrapper. Roll-up until completely wrapped. Perform the same step until all mixture are consumed.</li>
+            <li>Heat oil in a cooking pot. Deep fry lumpia in medium heat until it floats.</li>
+            <li>Remove from the pot. Let excess oil drip. Serve. Share and enjoy</li>
+       
+    </div>
+
+        <!-- Recipe 3 -->
+        <div class="recipe-item" onclick="toggleRecipe(3)">
+            <img src="c:\Users\Student\Desktop\COOKBOKK\flan2.jpg" alt="LECHE FLAN">
+            <h3>LECHE FLAN</h3>
+        </div>
+        <div class="recipe-detail" id="recipe3">
+            <h3>LECHE FLAN</h3>
+            <p><strong>Description:</strong> Leche Flan is a dessert made-up of eggs and milk with a soft caramel on top. It resembles crème caramel and caramel custard. This delicious dessert is known throughout the world.It has been a regular item in the  menu of most restaurants because of its taste, ease in preparation and long shelf life. It can also be added as a component to build other great tasting dessert creations.</p>
+            <p><strong>Ingredients:</strong></p>
+
+                <li>10 pieces eggs</li>
+                <li>1 can condensed milk (14 oz)</li>
+                <li>1 cup fresh milk or evaporated milk</li>
+                <li>1 cup granulated sugar</li>
+                <li>1 teaspoon vanilla extract</li>
+
+            <p><strong>Procedure:</strong> </p>
+            
+            <li>Using all the eggs, separate the yolk from the egg white (only egg yolks will be used).</li>
+                <li>Place the egg yolks in a big bowl then beat them using a fork or an egg beater</li>
+                <li>Add the condensed milk and mix thoroughly</li>
+                <li>Pour-in the fresh milk and Vanilla. Mix well</li>
+                <li>Put the mold (llanera) on top of the stove and heat using low fire</li>
+                <li>Put-in the granulated sugar on the mold and mix thoroughly until the solid sugar turns into liquid (caramel) having a light brown color. Note: Sometimes it is hard to find a Llanera (Traditional flan mold) depending on your location. I find it more convenient to use individual Round Pans in making leche flan.</li>
+                <li>Spread the caramel (liquid sugar) evenly on the flat side of the mold</li>
+                <li>Wait for 5 minutes then pour the egg yolk and milk mixture on the mold</li>
+                <li>Cover the top of the mold using an Aluminum foil</li>
+                <li>Steam the mold with egg and milk mixture for 30 to 35 minutes.</li>
+                <li>After steaming, let the temperature cool down then refrigerate</li>
+
+        </p>
+        </div>
+
+         <!-- Recipe 4 -->
+         <div class="recipe-item" onclick="toggleRecipe(4)">
+            <img src="crispy-pata.jpg" alt="CRISPY PATA">
+            <h3>CRISPY PATA</h3>
+        </div>
+        <div class="recipe-detail" id="recipe4">
+            <h3>CRISPY PATA</h3>
+            <p><strong>Description:</strong>Crispy Pata or crispy pork leg is a popular Filipino pork dish. This dish can be eaten as a main dish along with rice and atcharang papaya. People also consume it as beer food or pulutan. It is best when dipped in a spicy vinegar mixture.</p>
+            <p><strong>Ingredients:</strong></p>
+
+            <ul>
+                
+                <li>1 piece whole pig leg</li>
+                <li>6 pieces dried bay leaves</li>
+                <li>2 tablespoons whole peppercorn</li>
+                <li>4 pieces star anise </li>
+                <li>6 teaspoons salt</li>
+                <li>2 teaspoons ground black pepper</li>
+                <li>2 teaspoons garlic powder</li>
+                <li>12 cups water</li>
+                <li>6 cups cooking oil</li>
+                
+            
+            </ul>
+
+            <p><strong>Procedure:</strong></p>
+            <ol>
+                <li>Pour water in a cooking pot then let boil.</li>
+                <li>Put-in dried bay leaves, whole peppercorn, star anise, and 4 teaspoons of salt.</li>
+                <li>Add the whole pig’s legs in the cooking pot then simmer until the leg becomes tender (about 45 to 60 minutes).</li>
+                <li>Rub the leg with garlic powder, ground black pepper, and remaining salt. Let stand for 15 minutes to absorb the rub.</li>
+                <li>Heat a clean large cooking pot (preferably with cover) and pour-in cooking oil.</li>
+                <li>When the oil becomes hot, deep fry the rubbed pork leg. Continue cooking in medium heat until one side becomes crispy, and then cautiously flip the leg to crisp the other side. Note: Be extra careful in doing this procedure.</li>
+                <li>Turn-off the heat; remove the crispy pork leg; and transfer it to a wide serving plate. Serve with atcharang papaya and soy sauce – vinegar dipping sauce.</li> 
+            </ol>
+
+        </p>
+        </div>
+
+         <!-- Recipe 5 -->
+         <div class="recipe-item" onclick="toggleRecipe(5)">
+            <img src="choiom2.jpg" alt="LECHON">
+            <h3>LECHON</h3>
+        </div>
+        <div class="recipe-detail" id="recipe5">
+            <h3>LECHON/h3>
+            <p><strong>Description:</strong> Lechon, derived from a Spanish word for roasted suckling pig is one of the most popular dishes in the Philippines. The slowly-roasted suckling pig is usually stuffed with lemongrass, tamarind, garlic, onions, and chives, and is then roasted on a large bamboo spit over an open fire.</p>
+            <p><strong>Ingredients:</strong></p>
+
+            <ul>
+                
+                <li>1 whole pig (18-20 kg) (40-44 lb)</li>
+                <li>salt</li>
+                <li>black pepper</li>
+                <li>soy sauce</li>
+                <li>glaze</li>
+                <li>1 l (4.5 cups) Sprite</li>
+                <li>stuffing</li>
+                <li>10 bundles lemongrass, tangled</li>
+                <li>1/4 cup (110g) star anise</li>
+                <li>6 bay leaves, cut into small pieces</li>
+                <li>5 cups crushed garlic</li>
+                <li>2 kg (4.4 lb) green onion</li>
+            
+            </ul>
+            <p><strong>Procedure:</strong> Toss lettuce with dressing, top with croutons and cheese.</p>
+            <ol>
+                <li>Peel the mangoes and cut the lobes off as close to the pit as possible. Thinly slice half of the mango lobes into ¹⁄₁₆-inch (15 mm)-thick slices, keeping the slices intact and transferring to a tray or plate. Cover and refrigerate until ready to assemble. Cut the remaining mango into ½-inch (1.24 cm) cubes. Transfer to a bowl, cover, and refrigerate until ready to assemble</li>
+                <li>Add 2 cups of cream to a chilled large bowl and use an electric hand mixer to beat on medium-high speed until stiff peaks form, 3–5 minutes. Add the remaining 2 cups of cream and beat again until stiff peaks form, 3–5 minutes more.</li>
+                <li>Add half of the condensed milk and beat until fully incorporated. Add the remaining condensed milk, vanilla, and salt and beat until fully incorporated and stiff peaks form, 4–7 minutes. Give the mixture a final stir with a rubber spatula.</li>
+                <li>Line a chilled 7 x 11 (17 x 27 cm) -inch glass dish with parchment paper, leaving overhang on all sides.</li>
+                <li>Cover the bottom of the dish with a single layer of graham crackers, breaking to fill in any gaps as necessary. Spread 2–3 cups (480-720 ml) of the whipped cream mixture evenly over the graham crackers, all the way to the edges and corners of the dish. Top with ½ of the diced mango. Repeat to make another layer. For the final layer, arrange the graham crackers over the diced mango and top with 2–3 cups of whipped cream. Arrange the thinly sliced mango decoratively on top. Sprinkle crushed graham crackers around the edge of the float.</li>
+                <li>Cover the mango float in plastic wrap and refrigerate for 4–6 hours, until the cream sets and the graham crackers soften and absorb some moisture. Transfer the float to the freezer for 8 hours, or overnight.</li>
+                <li>Remove the float from the freezer and use the parchment paper to lift out of the dish. Let thaw for 5–10 minutes before slicing.</li>
+                <li>Serve with your favorite dessert wine, cocktail, coffee, or tea.</li> 
+            </ol>
+
+        </p>
+        </div>
+
+
+
+    <!-- Recipe 6 -->
+        <div class="recipe-item" onclick="toggleRecipe(6)">
+            <img src="PORK SISIG.jpg" alt="PORK SISIG">
+            <h3>PORK SISIG</h3>
+        </div>
+    <div class="recipe-detail" id="recipe6">
+    <h3>PORK SISIG</h3>
+        <p>Pork sisig is a popular Filipino dish. It can be considered as a main dish or an appetizer. The composition of this dish is mainly of pig’s parts such as minced pork meat, ears, and face. Chicken liver, onions, and chili peppers are also added.</p>    
+        <p><strong>Ingredients:</strong></p>
+
+    <ul>
+        <li>1 ½ lbs. Pork belly</li>
+        <li>3 tablespoons Knorr Liquid Seasoning</li>
+        <li>1 lb. pig face maskara</li>
+        <li>4 ounces chicken liver</li>
+        <li>2 pieces onion</li>
+        <li>½ cup chicharon crumbled</li>
+        <li>2 teaspoons onion powder</li>
+        <li>¼ teaspoon ground black pepper</li>
+        <li>½ teaspoon chili flakes optional</li>
+        <li>1 tablespoon butter</li>
+        <li>3 tablespoons cooking oil</li>
+        <li>2 quarts water</li>      
+    </ul>
+
+    <p><strong>Procedure:</strong> </p>
+
+    <ol>       
+        <li>Boil water in a pot. Add pork belly and pig face. Cover and continue to boil for 1 hour in medium heat. Drain water and let the meat cool down.
+            1 ½ lbs. Pork belly, 2 quarts water, 1 lb. pig face</li>
+        <li>Grill boiled meats for 5 minutes per side. Remove from the grill and chop into small pieces. Note: feel free to mince the meat if preferred.</li>
+        <li>Heat oil on a pan. Saute onion for 1 minute.</li>
+        <li>2 pieces onion, 3 tablespoons cooking oil</li>
+        <li>Add chicken liver. Continue to sauté until thoroughly cooked. Mash the liver while cooking until it breaks down into small pieces.
+            4 ounces chicken liver</li>
+        <li>Add minced meat and chicharon into the pan. Stir until all ingredients are evenly distributed.
+            ½ cup chicharon</li>
+        <li> chili flakes, onion powder, and ground black pepper.
+            ¼ teaspoon ground black pepper, ½ teaspoon chili flakes, 2 teaspoons onion powder</li>
+        <li>Pour Knorr Liquid Seasoning. Stir.
+            3 tablespoons Knorr Liquid Seasoning</li>
+        <li>Add Lady’s Choice Mayonnaise. Stir and cook for 3 minutes. Set aside.
+            3 tablespoons Lady’s Choice Mayonnaise</li>
+        <li>Heat a metal plate. Add butter. Tranfer cooked sisig onto the metal plate. Continue to cook until it sizzles. Top with more chicharon.
+            1 tablespoon butter</li>
+        <li>Serve with calamansi or lime. Serve. Share and enjoy with white rice.</li>
+    </ol>
+
+</p>
+</div>
+
+<!-- Recipe 7 -->
+<div class="recipe-item" onclick="toggleRecipe(7)">
+    <img src="MANGO FLOAT.jpg" alt="MANGO FLOAT">
+    <h3>MANGO FLOAT</h3>
+</div>
+<div class="recipe-detail" id="recipe7">
+    <h3>MANGO FLOAT</h3>
+    <p><strong>Description:</strong> Mango float, also known as mango royale, crema de mangga or mango graham cake is a popular Filipino dessert. This icebox cake is made from layers of graham crackers, whipped cream, condensed milk, and ripe mangoes. This whole assembly is chilled and set before being cut into squares to serve.Mango float, also known as mango royale, crema de mangga or mango graham cake is a popular Filipino dessert. This icebox cake is made from layers of graham crackers, whipped cream, condensed milk, and ripe mangoes. This whole assembly is chilled and set before being cut into squares to serve.</p>
+    <p><strong>Ingredients:</strong></p>
+
+    <ul>
+        <li>for 8 servings</li>
+       
+        <br>
+       
+        <li>5 mangoes, ripe but not soft</li>
+        <li>4 cups heavy cream(960 mL), or canned all-purpose cream, chilled overnight</li>
+        <li>1 can condensed milk, chilled overnight</li>
+        <li>2 teaspoons vanilla extract</li>
+        <li>½ teaspoon kosher salt</li>
+        <li>21 crackers graham cracker, plus more, crushed, for topping</li>   
+    </ul>
+
+    <p><strong>Procedure:</strong></p>
+    <ol>
+        <li>Peel the mangoes and cut the lobes off as close to the pit as possible. Thinly slice half of the mango lobes into ¹⁄₁₆-inch (15 mm)-thick slices, keeping the slices intact and transferring to a tray or plate. Cover and refrigerate until ready to assemble. Cut the remaining mango into ½-inch (1.24 cm) cubes. Transfer to a bowl, cover, and refrigerate until ready to assemble</li>
+        <li>Add 2 cups of cream to a chilled large bowl and use an electric hand mixer to beat on medium-high speed until stiff peaks form, 3–5 minutes. Add the remaining 2 cups of cream and beat again until stiff peaks form, 3–5 minutes more.</li>
+        <li>Add half of the condensed milk and beat until fully incorporated. Add the remaining condensed milk, vanilla, and salt and beat until fully incorporated and stiff peaks form, 4–7 minutes. Give the mixture a final stir with a rubber spatula.</li>
+        <li>Line a chilled 7 x 11 (17 x 27 cm) -inch glass dish with parchment paper, leaving overhang on all sides.</li>
+        <li>Cover the bottom of the dish with a single layer of graham crackers, breaking to fill in any gaps as necessary. Spread 2–3 cups (480-720 ml) of the whipped cream mixture evenly over the graham crackers, all the way to the edges and corners of the dish. Top with ½ of the diced mango. Repeat to make another layer. For the final layer, arrange the graham crackers over the diced mango and top with 2–3 cups of whipped cream. Arrange the thinly sliced mango decoratively on top. Sprinkle crushed graham crackers around the edge of the float.</li>
+        <li>Cover the mango float in plastic wrap and refrigerate for 4–6 hours, until the cream sets and the graham crackers soften and absorb some moisture. Transfer the float to the freezer for 8 hours, or overnight.</li>
+        <li>Remove the float from the freezer and use the parchment paper to lift out of the dish. Let thaw for 5–10 minutes before slicing.</li>
+        <li>Serve with your favorite dessert wine, cocktail, coffee, or tea.</li>
+       
+    </ol>
+
+    </p>
+    </div>
+
+    <!-- Recipe 8 -->
+    <div class="recipe-item" onclick="toggleRecipe(8)">
+         <img src="HALO.jpg" alt="HALO-HALO">
+         <h3>HALO-HALO</h3>
+    </div>
+    <div class="recipe-detail" id="recipe8">
+
+    <h3>HALO-HALO</h3>
+    <p><strong>Description:</strong> This ultimate Filipino summer treat, Halo-halo is a sure and delicious way to cool down. With the combination of shaved ice and many different layers of sweet beans, fruits and other treats then drizzled with milk. Let us not forget the toppings, leche flan, ube halaya or even ube ice cream!
+        'Halo-halo' is a Tagalog word that means mixed,  as that is what this is basically. A concoction of various sweet treats that are put together to culminate into one great cold treat. A colorful medley that is sure to cheer you up even on the hottest and most humid of days.</p>
+    <p><strong>Ingredients:</strong></p>
+
+    ul>
+                           
+        <li>1 cup crushed or shaved ice</li>
+        <li>¼ cup milk fresh or evaporated</li>
+        <li>1 teaspoon sugar if needed</li>
+        <li>1 teaspoon sweetened saba or plantain bananas</li>
+        <li>1 teaspoon sweetened sweet potatoes</li>
+        <li>1 teaspoon sweetened red munggo</li>
+        <li>1 teaspoon sweetened garbanzos (chickpeas) or beans</li>
+        <li>1 teaspoon fresh of sweetened langka jack fruit</li>
+        <li>1 teaspoon coconut strips or sweetened macapuno</li>
+        <li>1 teaspoon nata de coco coconut gel</li>
+        <li>1 teaspoon sago or tapioca pearls or jelly cut into cubes</li>
+        <li>1 tablespoon leche flan topping</li>
+        <li>1 tablespoon ube jam or 1 scoop of ube ice cream topping</li>
+
+    </ul>
+
+    <p><strong>Procedure:</strong></p>
+    <ol>
+                         
+        <li>In a tall glass, add a teaspoon of each of your selected ingredients.</li>
+        <li>Add sugar if you like. Personally, I find that the other ingredients are sweet enough so I do not any more sugar.</li>
+        <li>Fill the glass with shaved ice up to the brim. Push it down and add some more. </li>
+        <li>Drizzle with milk. </li>
+        <li>Add the toppings of choice.</li>
+           
+    </ol>
+</p>
+    </div>
+
+    <!-- Recipe 9 -->
+    <div class="recipe-item" onclick="toggleRecipe(9)">
+        <img src="hamburger-steak-4.jpg" alt="HAMBURGER STEAK">
+        <h3>HAMBURGER STEAK</h3>
+    </div>
+    <div class="recipe-detail" id="recipe9">
+        <h3>HAMBURGER STEAK</h3>
+        <p><strong>Description:</strong>Biting into a rich, thick burger patty is arguably one of the most satisfying classic dining experiences. Perhaps it is what leads us running again and again to our favorite burger joints. But if you decide to make them, yourself, you’ll have the agency to choose your seasonings, and very importantly, sauces to match your palate. And if flavorful, copious amounts of warm gravy is your preference, you might want to try my Beef Burger Steak recipe.</p>
+        <p><strong>Ingredients:</strong></p>
+
+    <ul>
+        
+        <li>1 lb. ground beef</li>
+        <li>1 teaspoon onion powder</li>
+        <li>1 piece Knorr Beef Cube</li>
+        <li>1/2 cup breadcrumbs</li>
+        <li>1/2 teaspoon garlic powder</li>
+        <li>1 piece egg beaten</li>
+        <li>1/4 teaspoon ground black pepper</li>
+        <li>¼ cup cooking oil</li>
+        <li>2 tablespoons parsley chopped</li>
+        <h3>Gravy ingredients:</h3>
+        <li>5 ounces button mushroom thinly sliced</li>
+        <li>3 tablespoons butter</li>
+        <li>4 tablespoons all-purpose flour</li>
+        <li>1 piece Knorr Beef Cube</li>
+        <li>1/4 teaspoon Knorr liquid seasoning</li>
+        <li>1/2 teaspoon onion powder</li>
+        <li>1/4 teaspoon garlic powder</li>
+        <li>1 3/4 cup water</li>
+        
+    
+    </ul>
+    <p><strong>Procedure:</strong></p>
+
+    <ol>
+        <li>Make the beef patties by combining ground beef, onion powder, garlic powder, ground black pepper, and egg. Grate 1 piece of Knorr beef cube. Mix everything together.</li>
+        <li>Make the patties by scooping around ¼ cup of the meat mixture. Mold it into ball shaped figures and then flatten.</li>
+        <li>Heat 2 tablespoons cooking oil in a pan. Fry one side of the patties in medium heat until it browns. Turn it over and do the same procedure to the opposite side. Remove from the pan. Set it aside.</li>
+        <li>Make the gravy by melting butter in a saucepan.</li>
+        <li>Add all-purpose flour. Cook in medium heat while stirring for 8 minutes to make a brown roux.</li>
+        <li>Add Knorr Beef Cube. Stir until melted.</li>
+        <li>Pour water into the saucepan. Stir until well blended. Note: you will notice that the mixture slowly gets thicker in time.</li>
+        <li>Add onion powder, garlic powder, ground black pepper, and Knorr Liquid Seasoning. Cook for 30 seconds.</li>
+        <li>Add sliced mushrooms. Cook for 1 minute. Set aside.</li>
+        <li>Arrange beef patties over a cup of steamed rice and then pour beef gravy all over.</li>
+        <li>Top with chopped parsley, Serve warm.</li>
+    </ol>
+
+    </p>
+    </div>
+
+
+        <!-- Recipe 10 -->
+        <div class="recipe-item" onclick="toggleRecipe(10)">
+        <img src="Baked-Chicken-Wings-2.jpg" alt="CHICKEN WINGS">
+        <h3>CHICKEN WINGS</h3>
+        </div>
+    <div class="recipe-detail" id="recipe10">
+    <h3>CHICKEN WINGS</h3>
+    <p><strong>Description:</strong> Buffalo chicken wings are deliciously saucy and rich with a very unique flavor that sets it apart. Hailing from the city where it gets its name — Buffalo, New York — these wings are packed with batter that will set your taste buds alight! Red hot and delicious, buffalo wings have grown in popularity across the world, with different restaurant chains specializing in this yummy dish. For the young and old alike, buffalo chicken wings are simply made to be enjoyed!</p>
+    <p><strong>Ingredients:</strong></p>
+
+    <ul> 
+        <li>2 lbs chicken wings</li>
+        <li>5 Tablespoons unsalted butter</li>
+        <li>1/2 cup Frank's RedHot sauce</li>      
+    </ul>
+
+    <p><strong>Procedure:</strong> </p>
+    <ol>
+        <li>Divide the wings into 3 parts. Separate the drumette from the wingette. Cut off the wingtip and set aside. Note: we'll only be using the big parts.</li>
+        <li>Pat the wings dry with paper towel and arrange inside an air fryer. Air fry one side for 12 minutes at 350F. Do the same with the opposite side.</li>
+        <li>Make the sauce by melting butter in a microwave oven. Add the hot sauce and stir until well blended.</li>
+        <li>Soak chicken wings in the sauce. Make sure that each piece is fully coated.</li>
+        <li>Serve with ranch dressing, carrots, and celery.</li> 
+    </ol>
+    </p>
+    </div>
+
+</div>
+
+<script>
+    function toggleRecipe(recipeId) {
+        var element = document.getElementById('recipe' + recipeId);
+        element.classList.toggle('show');
+    }
+
+
+    function filterRecipes() {
+        var input, filter, items, h3, i, txtValue;
+        input = document.getElementById('search');
+        filter = input.value.toUpperCase();
+        items = document.getElementsByClassName('recipe-item');
+        for (i = 0; i < items.length; i++) {
+            h3 = items[i].getElementsByTagName("h3")[0];
+            txtValue = h3.textContent || h3.innerText;
+        }
+    }
+</script>
+
+</body>
+</html>
